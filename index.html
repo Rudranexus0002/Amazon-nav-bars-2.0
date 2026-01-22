@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="amazon.css">
+</head>
+<style>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background: #111;
+}
+
+/* NAVBAR */
+#navbar{
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background: #000;
+  padding: 0 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+/* LOGO AREA */
+.logo-area{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logo{
+  color: #f08800;
+  font-weight: 700;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.location{
+  font-size: 14px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* SEARCH AREA */
+.search-area{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 550px;
+}
+
+.search-area input{
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-area button{
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: none;
+  background: #f08804;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* MENU */
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu-item{
+  position: relative;
+}
+
+.menu-item a{
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 600;
+}
+
+/* DROPDOWN */
+.dropdown{
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  width: 180px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.dropdown p{
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}
+
+.dropdown p:last-child{
+  border-bottom: none;
+}
+
+.menu-item:hover .dropdown{
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  #navbar{
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px;
+  }
+  .search-area{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  .menu{
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+}
+</style>
+<body>
+
+  <div id="navbar">
+    <div class="logo-area">
+      <a href="#" id="logo">amazon.in</a>
+      <div class="location">
+        <span>📍</span>
+        <span>Deliver to India</span>
+      </div>
+    </div>
+
+    <div class="search-area">
+      <input placeholder="Search Amazon.in" />
+      <button>Search</button>
+    </div>
+
+    <div class="menu">
+      <div class="menu-item">
+        <a href="#">Account</a>
+        <div class="dropdown">
+          <p>Sign in</p>
+          <p>Your Orders</p>
+          <p>Prime</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <a href="#">My Cart</a>
+        <div class="dropdown">
+          <p>No items in cart</p>
+        </div>
+      </div>
+
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+</body>
+</html>
