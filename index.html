@@ -1,212 +1,183 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Gym Template</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {margin:0;padding:0;box-sizing:border-box;}
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: linear-gradient(90deg, #000, #b30000);
-      padding: 20px 50px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 800;
-      color: white;
-      letter-spacing: 2px;
-    }
-
-    /* Hero Banner */
-    .banner-slider {
-      position: relative;
-      width: 100%;
-      height: 500px;
-      overflow: hidden;
-    }
-    .banner-slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out, transform 0.5s;
-    }
-    .banner-slide.active {
-      opacity: 1;
-    }
-    .banner-slide:hover {
-      transform: scale(1.05);
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2.5rem;
-      color: #ff3333;
-      margin-bottom: 20px;
-    }
-
-    /* Image Grid */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .image-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .image-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-    .image-card:hover img {
-      transform: scale(1.2);
-    }
-    .image-details {
-      position: absolute;
-      bottom: -100%;
-      left: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.8);
-      color: white;
-      padding: 20px;
-      text-align: center;
-      transition: bottom 0.5s;
-    }
-    .image-card:hover .image-details {
-      bottom: 0;
-    }
-
-    /* Gym Parts Slider */
-    .parts-slider {
-      position: relative;
-      width: 100%;
-      height: 350px;
-      overflow: hidden;
-      margin-top: 50px;
-    }
-    .parts-slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out, transform 0.5s;
-    }
-    .parts-slide.active {
-      opacity: 1;
-    }
-    .parts-slide:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      margin-top: 50px;
-      color: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="amazon.css">
 </head>
-<body>
-  <header>🏋️ Premium Gym</header>
+<style>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: Arial, sans-serif;
+}
 
-  <!-- Hero Banner Slider -->
-  <div class="banner-slider">
-    <div class="banner-slide active" style="background-image:url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1400&q=80');"></div>
-    <div class="banner-slide" style="background-image:url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80');"></div>
-    <div class="banner-slide" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1400&q=80');"></div>
-    <div class="banner-slide" style="background-image:url('https://images.unsplash.com/photo-1623874106686-5be2b325c8f1?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');"></div>
-    <div class="banner-slide" style="background-image:url('https://images.unsplash.com/photo-1728486145245-d4cb0c9c3470?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');"></div>
-    <div class="banner-slide" style="background-image:url('https://plus.unsplash.com/premium_photo-1664301427534-28b6a53a9c4f?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');"></div>
+body{
+  background: #111;
+}
+
+/* NAVBAR */
+#navbar{
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background: #000;
+  padding: 0 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+/* LOGO AREA */
+.logo-area{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#logo{
+  color: #f08800;
+  font-weight: 700;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.location{
+  font-size: 14px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* SEARCH AREA */
+.search-area{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 550px;
+}
+
+.search-area input{
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-area button{
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: none;
+  background: #f08804;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* MENU */
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu-item{
+  position: relative;
+}
+
+.menu-item a{
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 600;
+}
+
+/* DROPDOWN */
+.dropdown{
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  width: 180px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.dropdown p{
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}
+
+.dropdown p:last-child{
+  border-bottom: none;
+}
+
+.menu-item:hover .dropdown{
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  #navbar{
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px;
+  }
+  .search-area{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  .menu{
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+}
+</style>
+<body>
+
+  <div id="navbar">
+    <div class="logo-area">
+      <a href="#" id="logo">amazon.in</a>
+      <div class="location">
+        <span>📍</span>
+        <span>Deliver to India</span>
+      </div>
+    </div>
+
+    <div class="search-area">
+      <input placeholder="Search Amazon.in" />
+      <button>Search</button>
+    </div>
+
+    <div class="menu">
+      <div class="menu-item">
+        <a href="#">Account</a>
+        <div class="dropdown">
+          <p>Sign in</p>
+          <p>Your Orders</p>
+          <p>Prime</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <a href="#">My Cart</a>
+        <div class="dropdown">
+          <p>No items in cart</p>
+        </div>
+      </div>
+
+      <a href="#">Contact Us</a>
+    </div>
   </div>
 
-  <!-- About Section -->
-  <section>
-    <h2>About Our Gym</h2>
-    <p>Train with the best equipment, modern facilities, and expert trainers in a premium and luxury environment.</p>
-  </section>
-
-  <!-- Programs Section with 5 images -->
-  <section>
-    <h2>Our Programs</h2>
-    <div class="image-grid">
-      <div class="image-card">
-        <img src="https://images.unsplash.com/photo-1637666062717-1c6bcfa4a4df?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3ltJTIwZXF1aXBtZW50fGVufDB8fDB8fHww" alt="Strength Training">
-        <div class="image-details"><h3>Strength Training</h3><p>Build muscles with world-class equipment.</p></div>
-      </div>
-      <div class="image-card">
-        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Cardio">
-        <div class="image-details"><h3>Cardio</h3><p>Boost stamina and heart health.</p></div>
-      </div>
-      <div class="image-card">
-        <img src="https://plus.unsplash.com/premium_photo-1661776042506-9154882ba689?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHlvZ2F8ZW58MHx8MHx8fDA%3D" alt="Yoga">
-        <div class="image-details"><h3>Yoga</h3><p>Relax and find balance.</p></div>
-      </div>
-      <div class="image-card">
-        <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=800&q=80" alt="CrossFit">
-        <div class="image-details"><h3>CrossFit</h3><p>High intensity functional workouts.</p></div>
-      </div>
-      <div class="image-card">
-        <img src="https://images.unsplash.com/photo-1716307043003-dbe6a5cc496e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Boxing">
-        <div class="image-details"><h3>Boxing</h3><p>Train like a pro fighter.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gym Parts Slider -->
-  <section>
-    <h2>Gym Equipment</h2>
-    <div class="parts-slider">
-      <div class="parts-slide active" style="background-image:url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=1400&q=80');"></div>
-      <div class="parts-slide" style="background-image:url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-      <div class="parts-slide" style="background-image:url('https://images.unsplash.com/photo-1685633224306-2a2b37050713?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-      <div class="parts-slide" style="background-image:url('https://plus.unsplash.com/premium_photo-1663126271945-881bd77caf8d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-      <div class="parts-slide" style="background-image:url('https://plus.unsplash.com/premium_photo-1723921356647-2a3c6b6016c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-    </div>
-  </section>
-
-  <footer>© 2025 Premium Gym. All Rights Reserved.</footer>
-
-  <script>
-    // Hero Banner
-    let slides = document.querySelectorAll('.banner-slide');
-    let index = 0;
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 4000);
-
-    // Gym Parts Slider
-    let partSlides = document.querySelectorAll('.parts-slide');
-    let pIndex = 0;
-    setInterval(() => {
-      partSlides[pIndex].classList.remove('active');
-      pIndex = (pIndex + 1) % partSlides.length;
-      partSlides[pIndex].classList.add('active');
-    }, 3000);
-  </script>
 </body>
 </html>
-```
